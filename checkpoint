@@ -1,0 +1,2 @@
+model_checkpoint_path: "C:\\Users\\Jatin-Lappy\\Desktop\\Image Processing (DS project sem 7)\\geeks for geeks\\Image-Classifier-ConvNet-in-Cats-Dog-dataset\\dogsvscats-0.001-6conv-basic.model"
+all_model_checkpoint_paths: "C:\\Users\\Jatin-Lappy\\Desktop\\Image Processing (DS project sem 7)\\geeks for geeks\\Image-Classifier-ConvNet-in-Cats-Dog-dataset\\dogsvscats-0.001-6conv-basic.model"
