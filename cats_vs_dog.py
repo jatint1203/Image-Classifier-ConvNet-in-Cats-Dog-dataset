@@ -12,9 +12,10 @@ TEST_DIR = '/test'
 IMG_SIZE = 50
 LR = 1e-3
 
-
+print("test")
 '''Setting up the model which will help with tensorflow models'''
 MODEL_NAME = 'dogsvscats-{}-{}.model'.format(LR, '6conv-basic')
+print(f"model name is {MODEL_NAME}")
 
 '''Labelling the dataset'''
 def label_img(img):
@@ -105,8 +106,9 @@ convnet = regression(convnet, optimizer='adam', learning_rate=LR, loss='categori
 
 model = tflearn.DNN(convnet, tensorboard_dir='log')
 
+print('{}.meta'.format(MODEL_NAME))
 #Loading the saved model
-if os.path.exists('C:/Users/knapseck/Desktop/Dev/Cov_Net{}.meta'.format(MODEL_NAME)):
+if os.path.exists('{}.meta'.format(MODEL_NAME)):
     model.load(MODEL_NAME)
     print('model loaded!')
 
@@ -127,7 +129,8 @@ test_y = [i[1] for i in test]
 model.fit({'input': X}, {'targets': Y}, n_epoch=5, validation_set=({'input': test_x}, {'targets': test_y}), 
     snapshot_step=500, show_metric=True, run_id=MODEL_NAME)
 model.save(MODEL_NAME)
-
+print(MODEL_NAME)
+print("model saved")
 '''Testing the data'''
 import matplotlib.pyplot as plt
 # if you need to create the data:
